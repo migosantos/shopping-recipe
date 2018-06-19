@@ -1,16 +1,10 @@
 
 <div class="container">
-<app-header></app-header>
+<app-header (navigationClicked)="onNavigationClicked($event)"></app-header>
   <div class="row">
     <div class="col-xs-12">
-      <app-recipe-book></app-recipe-book>
-    </div>
-  </div>
-
-  <hr>
-  <div class="row">
-    <div class="col-xs-12">
-      <app-shopping></app-shopping>
+      <app-recipe-book *ngIf="currentScreenName === 'RECIPES'"></app-recipe-book>
+      <app-shopping *ngIf="currentScreenName === 'SHOPPING_LIST'"></app-shopping>
     </div>
   </div>
 </div>

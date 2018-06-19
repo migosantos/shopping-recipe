@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  currentScreenName = 'RECIPES';
   title = 'app';
+  onNavigationClicked(screenName: string) {
+    this.currentScreenName = screenName;
+  }
 }
